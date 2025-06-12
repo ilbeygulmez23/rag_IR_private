@@ -14,7 +14,7 @@ ES_PORT = int(os.getenv("ES_PORT", 9200))
 ES_INDEX = os.getenv("ES_INDEX", "mlsum_tr_semantic")
 EMBED_MODEL_ID = os.getenv(
     "EMBEDDING_MODEL",
-    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    "sentence-transformers/all-mpnet-base-v2"
 )
 ES_URL = os.getenv("ES_URL", "http://localhost:9200")
 
