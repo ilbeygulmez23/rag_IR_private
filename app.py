@@ -16,9 +16,11 @@ EMBED_MODEL_ID = os.getenv(
     "EMBEDDING_MODEL",
     "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 )
+ES_URL = os.getenv("ES_URL", "http://localhost:9200")
+
 
 # Initialize once
-es_client = Elasticsearch(f"http://{ES_HOST}:{ES_PORT}")
+es_client = Elasticsearch(ES_URL)
 embed_model = SentenceTransformer(EMBED_MODEL_ID)
 
 app = FastAPI(title="RAG with Turkish LLaMA", version="1.0")
